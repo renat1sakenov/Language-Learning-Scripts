@@ -23,7 +23,7 @@ from random import randint
 
 
 def action():
-    if 'q' in input("Press 'q' to exit. Press any key to continue.\n"):
+    if 'q' in input("Press 'q' to exit. Press enter to continue.\n"):
         os.remove(fileName)
         sys.exit()
 
@@ -37,7 +37,7 @@ def LangNumExercise():
         tts = gtts.gTTS(str(num), lang=language)
         tts.save(fileName)
         playsound(fileName)
-        input('\nPress any key to display the number\n')
+        input('\nPress enter to display the number\n')
         _ = os.system(CLS_CMD)
         print("\n%s\n" % str(num))
         action()
